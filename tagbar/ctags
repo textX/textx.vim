@@ -1,0 +1,7 @@
+--langdef=textx
+--langmap=textx:.tx
+--regex-textx=/^\s*([a-z0-9_]+)\s*(\[.*?\])?:/\1/r,rules/i
+--regex-textx=/(\w+)\s*(\=|\+\=|\*\=|\?\=)/\1/a,attributes/i
+--regex-textx=/\=[^=]*\s(\w+)\s*(\=|\+\=|\*\=|\?\=)/\1/a,attributes/i
+--regex-textx=/\=[^=]*\=[^=]*\s(\w+)\s*(\=|\+\=|\*\=|\?\=)/\1/a,attributes/i
+
