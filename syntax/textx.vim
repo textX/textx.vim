@@ -2,10 +2,6 @@ if exists("b:current_syntax")
   finish
 endif
 
-syntax match textXComment "\v\/\/.*$" oneline
-syntax region textXComment start="/\*" end="\*/"
-      \ contains=textXComment fold
-
 syntax keyword textXKeyword
       \ import
 
@@ -27,7 +23,7 @@ syntax keyword textXType
 
 syntax region textXString start=/"/ skip=/\\"/ end=/"/ oneline
 syntax region textXString start=/'/ skip=/\\'/ end=/'/ oneline
-syntax region textXRegEx start=/\/[^/]/ skip=/\\\// end=/\// oneline
+syntax region textXRegEx start=/\// skip=/\\\// end=/\// oneline
 syntax region textXParamsReg start="\[" end="\]"
       \ contains=textXParams,textXString,textXOperator
 
@@ -48,6 +44,11 @@ syntax match textXOperator "\v\+"
 syntax match textXOperator "\v\*"
 syntax match textXOperator "\v\?"
 syntax match textXOperator "\v\|"
+
+" Comments
+syntax match textXComment "\v\/\/.*$" oneline
+syntax region textXComment start="/\*" end="\*/"
+      \ contains=textXComment fold
 
 
 " Highlights
