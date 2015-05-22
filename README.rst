@@ -14,3 +14,8 @@ Tagbar support
 
 .. image:: https://raw.githubusercontent.com/igordejanovic/textx.vim/master/screenshots/textX-vim-tagbar.png
 
+TODO list
+~~~~~~~~~
+
+.. image:: https://raw.githubusercontent.com/igordejanovic/textx.vim/master/screenshots/textX-vim-tagbar-TODO.png
+

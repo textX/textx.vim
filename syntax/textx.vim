@@ -46,12 +46,14 @@ syntax match textXOperator "\v\?"
 syntax match textXOperator "\v\|"
 
 " Comments
-syntax match textXComment "\v\/\/.*$" oneline
+syntax match textXTodo /TODO:/ contained
+syntax match textXComment "\v\/\/.*$" contains=textXTodo oneline
 syntax region textXComment start="/\*" end="\*/"
-      \ contains=textXComment fold
+      \ contains=textXComment,textXTodo fold
 
 
 " Highlights
+highlight default link textXTodo Todo
 highlight default link textXComment Comment
 highlight default link textXString String
 highlight default link textXRegEx String

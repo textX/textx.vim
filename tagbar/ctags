@@ -1,4 +1,6 @@
 --langdef=textx
 --langmap=textx:.tx
 --regex-textx=/^\s*([a-z0-9_]+)\s*(\[.*?\])?:/\1/r,rules/i
+--regex-textx=/\/\/\s*TODO:(.*$)/\1/t,todos/i
+
 
