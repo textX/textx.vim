@@ -28,6 +28,12 @@ syntax region textXParamsReg start="\[" end="\]"
       \ contains=textXParams,textXString,textXOperator
 
 
+" Rules folding
+syntax region textXRule start=/\v^\s*[A-Za-z0-9_]+\s*(\[.*\])?:/ end=';'
+      \ contains=textXParams,textXParamsReg,textXString,textXRegEx,textXOperator,textXType,
+      \ textXComment,textXVariable,textXAssignment,textXTodo fold
+
+
 " Variables
 syntax match textXVariable "\k\+\s*\(=\|+=\|*=\|?=\)\@="
 
