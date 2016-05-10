@@ -50,6 +50,9 @@ syntax match textXOperator "\v\+"
 syntax match textXOperator "\v\*"
 syntax match textXOperator "\v\?"
 syntax match textXOperator "\v\|"
+syntax match textXOperator "\v\!"
+syntax match textXOperator "\v\&"
+syntax match textXOperator "\v\-"
 
 " Comments
 syntax match textXTodo /TODO:/ contained
